@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/quotes-app/assets/favicon.17e50649.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Alpine Plugins -->
+<!-- <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script> -->
+ 
+
+<!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+    <title>Vite App</title>
+    <script type="module" crossorigin src="/quotes-app/assets/index.ecd97f5a.js"></script>
+    <link rel="stylesheet" href="/quotes-app/assets/index.0543088b.css">
+  </head>
+  <body>
+    <h2>Login</h2>
+    
+    <div x-data="login" class="login">
+      <div x-text="loggedmessage"></div>
+          <input x-model="username" type="text" placeholder="enter username" >
+          <input x-model="password" type="password" placeholder="enter password" >
+          <button @click="loginFunc()"  value="login">login</button>
+    </div>
+    
+    <div x-data="login" >
+      <h3>Don't have an account yet? Register below</h3>
+      <div x-text="infomessage"></div>
+    
+    <!-- <div x-data="{show: false}"">
+    <div x-show="show"> -->
+    
+   <input x-model="username" type="text" placeholder="enter username">
+   <input x-model="password" type="password" placeholder="enter password" class="register">
+   <button @click="registerUser()" name="action" value="Register" class="registerBtn">register</button>
+ <!-- </div> -->
+   </div> 
+   
+
+  <div x-data="{ open: false }">
+
+    <div x-show="open">
+    <div id="app"></div>
+    <div x-data="loveCounter" class="counter" >
+      <h2>Show some heart</h2>
+      <div x-text="hearts()" >
+      </div>
+      <div>
+          <button @click="love" >Show 💟</button>
+          <span x-text="loveCounter"></span>
+      </div>
+    </div>
+    <hr>
+<div x-data="quoteApp" class="quoteApp" >
+    <h2>Quote App</h2>
+    <button @click="getQuote()">Next quote 📢</button>
+    <div class="quote">
+      <div x-text="quote.quote" class="content" ></div>
+      <div>
+        <strong>by </strong><span x-text="quote.author"></span>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+    <!-- <script type="module" src="/server/index.js"></script> -->
+    
+   
+  </body>
+</html>
